@@ -1,0 +1,13 @@
+/* Write your CSS here */
+.event-list-item-card {
+  width: 50%;
+}
+.event-image {
+  width: 80%;
+}
+.event-name {
+  font-size: 15px;
+}
+.event-location {
+  font-size: 10px;
+}
