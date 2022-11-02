@@ -11,3 +11,9 @@
 .event-location {
   font-size: 10px;
 }
+.event-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}

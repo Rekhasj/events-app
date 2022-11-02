@@ -1,18 +1,21 @@
-import {Link} from 'react-dom'
 import './index.css'
 
 const EventItem = props => {
-  const {eventItemDetails} = props
-  const {imageUrl, name, location, registrationStatus} = eventItemDetails
+  const {eventItemDetails, activeEventId} = props
+  const {imageUrl, name, location, id} = eventItemDetails
+
+  const onClickEvent = () => {
+    activeEventId(id)
+  }
 
   return (
-    <Link to="/active" className="link-status">
-      <li className="event-list-item-card">
+    <li className="event-list-item-card">
+      <button className="event-button" type="button" onClick={onClickEvent}>
         <img alt="event" className="event-image" src={imageUrl} />
-        <h1 className="event-name">{name}</h1>
+        <p className="event-name">{name}</p>
         <p className="event-location">{location}</p>
-      </li>
-    </Link>
+      </button>
+    </li>
   )
 }
 
